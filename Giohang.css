@@ -30,7 +30,6 @@ body {
 
 #cart-list-item a{
     text-decoration: none;
-    color: #FFF;
 }
 
 #emptyCart img {
@@ -42,15 +41,6 @@ body {
 #emptyCart p {
     font-size: 18px;
     margin-bottom: 30px;
-}
-
-#continueShopping {
-    background-color: #ff4500; /* Màu đỏ của nút */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
 }
 
 #cartContent {
@@ -67,9 +57,18 @@ body {
     padding: 10px 0;
 }
 
+.cart-header{
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .product-column, .description-column, .price-column, .quantity-column, .total-column, .remove-column {
     flex: 1;
     text-align: center;
+}
+
+.description-column{
+    text-align: left;
 }
 
 .product-column img {
@@ -81,6 +80,8 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 #notes, #installmentOption {
@@ -94,22 +95,38 @@ body {
     box-sizing: border-box;
 }
 
-.cart-actions button {
+.cart-actions a { /* Áp dụng cho cả hai liên kết */
     padding: 10px 20px;
-    border: none;
-    background-color: #d9534f;
-    color: white;
+    border: 1px solid #ff0000;
     cursor: pointer;
     font-size: 16px;
+    border-radius: 50px;
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+    background-color: #ff0000;  
+    color: #FFF;
+    margin: 0px 10px;
 }
 
-.cart-actions button#checkout {
-    background-color: #5cb85c;
+#continueShopping:hover{
+    background-color: #FFF;
+    color: #ff0000;
 }
 
-.cart-actions button:hover {
-    opacity: 0.8;
+#checkout{
+    background-color: #FFF;
+    color: #ff0000;
 }
+
+/* Hiệu ứng hover */
+.cart-actions a:hover {
+    opacity: 0.8; 
+}
+
 
 input[type="number"] {
     width: 60px;

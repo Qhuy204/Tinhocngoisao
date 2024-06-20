@@ -157,7 +157,6 @@
 
     <div id="cart-list-item">
         <h2>GIỎ HÀNG</h2>
-
         <div id="emptyCart">
             <img src="Image/cart/cart-empty.png" alt="Giỏ hàng trống"> 
             <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
@@ -165,55 +164,29 @@
 
         </div>
 
-        <div id="cartContent">       
-            <div id="cartContent">
-                <div class="cart-header">
-                    <span class="product-column">Sản phẩm</span>
-                    <span class="description-column">Mô Tả</span>
-                    <span class="price-column">Giá</span>
-                    <span class="quantity-column">Số Lượng</span>
-                    <span class="total-column">Tổng</span>
-                    <span class="remove-column">Xóa</span>
+        <div id="cartContent">
+            <div class="cart-header">
+                <span class="product-column">Sản phẩm</span>
+                <span class="description-column">Mô Tả</span>
+                <span class="price-column">Giá</span>
+                <span class="quantity-column">Số Lượng</span>
+                <span class="total-column">Tổng</span>
+                <span class="remove-column">Xóa</span>
+            </div>
+        
+            <div id="cartItems">
+                <!-- Items will be dynamically generated here -->
+            </div> 
+        
+            <div class="cart-footer">
+                <div class="total-price">
+                    Tổng: <span id="totalPrice">0₫</span>
                 </div>
-            
-                <div id="cartItems">
-                    <!-- Items will be dynamically generated here -->
-                </div> 
-            
-                <div class="cart-footer">
-                    <div class="total-price">
-                        Tổng: <span id="totalPrice">0₫</span>
-                    </div>
-                    <div class="cart-actions">
-                        <a href="index.html" id="continueShopping">TIẾP TỤC MUA SẮM</a>
-                        <button id="checkout">THANH TOÁN</button>
-                    </div>
-                    
-                </div>
-                
-                <div id="notes">
-                    <h3>Chú Thích</h3>
-                    <textarea placeholder="Bạn muốn mô tả rõ hơn về đơn hàng..."></textarea>
-                </div>
-                <div id="installmentOption">
-                    <h3>MUA TRẢ GÓP QUA THẺ TÍN DỤNG</h3>
-                    <div>
-                        <input type="radio" id="installmentOption1" name="installmentOption" checked>
-                        <label for="installmentOption1">
-                            Chọn hình thức: Thanh toán thẻ - Trả góp (Lưu ý: LH nhân viên để kiểm tra tồn kho sản phẩm trước khi thanh toán)
-                        </label>
-                    </div>
-                    <div>
-                        <input type="radio" id="installmentOption2" name="installmentOption">
-                        <label for="installmentOption2">
-                            Chọn loại thẻ phù hợp với nhu cầu, nhập thông tin, sau đó tiến hành thanh toán
-                        </label>
-                    </div>
+                <div class="cart-actions">
+                    <a href="index.html" id="continueShopping">TIẾP TỤC MUA SẮM</a>
+                    <a href="Thanhtoan.html" id="checkout">THANH TOÁN</a> 
                 </div>
             </div>
-            
-            
-            
         </div>
         
 

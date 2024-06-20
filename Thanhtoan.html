@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/Index/favicon.png" type="image/png">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="Thanhtoan.css">
+    <script src="https://esgoo.net/scripts/jquery.js"></script>
+    <style type="text/css">
+        .css_select_div {
+            text-align: center;
+        }
+        .css_select {
+            display: inline-table;
+            width: 25%;
+            padding: 5px;
+            margin: 5px 2%;
+            border: solid 1px #686868;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            //Lấy tỉnh thành
+            $.getJSON('https://esgoo.net/api-tinhthanh/1/0.htm',function(data_tinh){
+                if(data_tinh.error==0){
+                   $.each(data_tinh.data, function (key_tinh,val_tinh) {
+                      $("#tinh").append('<option value="'+val_tinh.id+'">'+val_tinh.full_name+'</option>');
+                   });
+                   $("#tinh").change(function(e){
+                        var idtinh=$(this).val();
+                        //Lấy quận huyện
+                        $.getJSON('https://esgoo.net/api-tinhthanh/2/'+idtinh+'.htm',function(data_quan){
+                            if(data_quan.error==0){
+                               $("#quan").html('<option value="0">Quận Huyện</option>');  
+                               $("#phuong").html('<option value="0">Phường Xã</option>');   
+                               $.each(data_quan.data, function (key_quan,val_quan) {
+                                  $("#quan").append('<option value="'+val_quan.id+'">'+val_quan.full_name+'</option>');
+                               });
+                               //Lấy phường xã  
+                               $("#quan").change(function(e){
+                                    var idquan=$(this).val();
+                                    $.getJSON('https://esgoo.net/api-tinhthanh/3/'+idquan+'.htm',function(data_phuong){
+                                        if(data_phuong.error==0){
+                                           $("#phuong").html('<option value="0">Phường Xã</option>');   
+                                           $.each(data_phuong.data, function (key_phuong,val_phuong) {
+                                              $("#phuong").append('<option value="'+val_phuong.id+'">'+val_phuong.full_name+'</option>');
+                                           });
+                                        }
+                                    });
+                               });
+
+                            }
+                        });
+                   });   
+
+                }
+            });
+         });	    
+     </script>
+
+     
+
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve the productOrders from localStorage
+            const productOrders = JSON.parse(localStorage.getItem('productOrders')) || [];
+        
+            // Merge items with the same name
+            const mergedOrders = productOrders.reduce((acc, product) => {
+                const existingProduct = acc.find(item => item.name === product.name);
+                if (existingProduct) {
+                    existingProduct.quantity += product.quantity;
+                } else {
+                    acc.push({ ...product });
+                }
+                return acc;
+            }, []);
+        
+            // Function to format price
+            function formatPrice(price) {
+                return parseInt(price.replace(/[^\d]/g, ''), 10);
+            }
+        
+            // Function to update total price
+            function updateTotalPrice() {
+                const totalColumns = document.querySelectorAll('.cart-item .total-column'); // Lấy tất cả các cột tổng tiền trong các mục giỏ hàng
+                let total = 0;
+
+                totalColumns.forEach(totalColumn => {
+                    total += formatPrice(totalColumn.innerText);
+                });
+
+                document.getElementById('totalPrice').innerText = total.toLocaleString() + '₫';
+            }
+
+        
+            // Function to create a cart item element
+            function createCartItem(product) {
+                const price = formatPrice(product.price);
+                const quantity = product.quantity;
+                const total = price * quantity;
+
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                <div class="product-column">
+                    <img src="${product.photo}" alt="${product.name}">
+                </div>
+                <div class="description-column">${product.name}</div>
+                <div class="total-column">${total.toLocaleString()}₫</div> 
+                `;
+                // Loại bỏ các cột price-column và quantity-column 
+
+                return cartItem;
+            }
+                    
+            // Get the cartItems container
+            const cartItemsContainer = document.getElementById('cartItems');
+        
+            // Generate cart items
+            mergedOrders.forEach(product => {
+                const cartItem = createCartItem(product);
+                cartItemsContainer.appendChild(cartItem);
+            });
+        
+            // Update the total price initially
+            updateTotalPrice();
+        
+            // Save merged orders back to localStorage
+            localStorage.setItem('productOrders', JSON.stringify(mergedOrders));
+        });
+    </script>
+
+    <div class="container">
+        <div class="shipping-info">
+            <h1>TINHOCNGOISAO.COM</h1>
+            <div id="multilevel-link">
+                <p><a href="Giohang.html">Giỏ hàng</a> / <a href="#">Thanh toán</a></p>
+            </div>
+            <h2>Thông tin giao hàng</h2>
+            <h4>Bạn đã có tài khoản? <a href="Login.html">Đăng nhập</a></h4>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn">
+                <input type="email" id="email" name="email" placeholder="Nhập email của bạn">
+                <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại của bạn">
+                <input type="text" id="address" name="address" placeholder="Nhập địa chỉ của bạn">
+                <div class="css_select_div">
+                    <select class="css_select" id="tinh" name="tinh" title="Chọn Tỉnh Thành">
+                        <option value="0">Tỉnh Thành</option>
+                    </select>
+                    <select class="css_select" id="quan" name="quan" title="Chọn Quận Huyện">
+                        <option value="0">Quận Huyện</option>
+                    </select>
+                    <select class="css_select" id="phuong" name="phuong" title="Chọn Phường Xã">
+                        <option value="0">Phường Xã</option>
+                    </select>
+                </div>
+                <h3>Phương thức vận chuyển</h3>
+                <div class="shipping-method">
+                    <input type="radio" id="delivery1" name="shipping" value="delivery" checked>
+                    <label for="delivery1">Giao hàng tận nơi (SHIPPER BÁO PHÍ KHI GIAO HÀNG)</label>
+                </div>
+                <div class="shipping-method">
+                    <input type="radio" id="delivery2" name="shipping" value="delivery">
+                    <label for="delivery2">Nhận hàng trực tiếp</label>
+                </div>
+
+                
+                <h3>Phương thức thanh toán</h3>
+                <div class="payment-method">
+                    <input type="radio" id="cod" name="payment" value="cod" checked>
+                    <label for="cod">Thanh toán khi giao hàng (COD)</label>
+                    <p>Lưu ý: Vui lòng liên hệ nhân viên để kiểm tra tồn kho sản phẩm trước khi thanh toán!</p>
+                    <input type="radio" id="bank-transfer" name="payment" value="bank-transfer">
+                    <label for="bank-transfer">Chuyển khoản qua ngân hàng</label><br>
+                    <input type="radio" id="installments" name="payment" value="installments">
+                    <label for="installments">Thanh toán thẻ - Trả góp</label>
+                </div>
+                <button id="completeOrderButton">Hoàn tất đơn hàng</button>
+
+            </form>
+        </div>
+        <div id="cart-list-item">
+            <div id="cartContent">
+                <div class="cart-header">
+                    <span class="product-column">Sản phẩm</span>
+                    <span class="description-column">Mô Tả</span>
+                    <span class="total-column">Tổng</span>
+                </div>
+            
+                <div id="cartItems">
+
+                </div> 
+            </div>
+            <div id="total-money-paid">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="label-column"><b>Tổng tiền: </b></td>
+                            <td class="total-column" id="totalPrice"></td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+        </div>
+        
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const completeOrderButton = document.getElementById('completeOrderButton');
+
+            completeOrderButton.addEventListener('click', function(event) {
+                event.preventDefault(); // Ngăn chặn hành vi mặc định của button
+
+                alert('Đơn hàng của bạn đã được đặt thành công!');
+
+                // Chuyển hướng về index.html
+                window.location.href = 'index.html'; 
+            });
+            });
+
+        </script>
+        
+        
+    </div>
+</body>
+</html>
