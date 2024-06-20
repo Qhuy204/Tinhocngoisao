@@ -221,7 +221,6 @@ button:hover {
 #label-price {
     float: left;
     width: 0%; /* Điều chỉnh theo ý muốn */
-    font-weight: bold;
 }
 
 #totalPrice {

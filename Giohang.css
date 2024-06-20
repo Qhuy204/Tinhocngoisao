@@ -112,6 +112,15 @@ body {
     margin: 0px 10px;
 }
 
+#continueShopping1{
+    background-color: #ff0000;
+    color: #FFF;
+    height: 42px;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+
 #continueShopping:hover{
     background-color: #FFF;
     color: #ff0000;
