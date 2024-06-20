@@ -10,6 +10,7 @@
     <script src="jquery-3.7.1.min.js"></script>
     <script src="show-specs.js"></script>
     <script src="app.js"></script>
+    <script src="Giohang.js"></script>
 
 </head>
 
@@ -20,7 +21,12 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
+        }); 
+        $(document).ready(function() {
+        $("#header").load("header.html", function() {
+            updateCartCount(); // Gọi hàm sau khi header.html được tải
             });
+        });
     </script>
 
     <div id="main">
@@ -183,11 +189,11 @@
 
                             <div class="purchase-options">
                                 <div id="Buy">
-                                    <button id="buy-now">MUA NGAY</button>
+                                    <input id = "buy-now" type= "button" value = "MUA NGAY">
                                 </div>
                                 <div id="cart-installment">
-                                    <button id="add-to-cart">THÊM VÀO GIỎ HÀNG</button>
-                                    <button id="installment">TRẢ GÓP 0% QUA THẺ</button>
+                                    <input id="add-to-cart" type="button" value="THÊM VÀO GIỎ HÀNG">
+                                    <input id="installment" type="button" value="TRẢ GÓP 0% QUA THẺ">
                                 </div>
                                 <div id = "call">
                                     <p>Gọi đặt mua <a href="#">1900 0243</a> (8:30 - 21:00)</p>

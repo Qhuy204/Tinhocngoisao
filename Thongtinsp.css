@@ -324,7 +324,7 @@ body {
     gap: 10px;
 }
 
-.purchase-options button {
+.purchase-options input {
     flex: 1;
     padding: 10px;
     font-size: 16px;
@@ -340,12 +340,15 @@ body {
     margin: 10px 10px 10px 0px;
 }
 
+
 #add-to-cart {
     background-color: #0991e0;
+    width: 50%;
 }
 
 #installment {
     background-color: #0991e0;
+    width: 50%;
 }
 
 #call {

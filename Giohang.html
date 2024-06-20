@@ -6,6 +6,138 @@
     <link rel="icon" href="Image/Index/favicon.png" type="image/png">
     <title>Giỏ hàng</title>
     <link rel="stylesheet" href="Giohang.css">
+    <script src="jquery-3.7.1.min.js"></script> 
+    <script src="Giohang.js"></script>
+    <script>$(document).ready(function() {
+        $("#header").load("header.html", function() {
+            updateCartCount(); // Gọi hàm sau khi header.html được tải
+            });
+        });
+        </script>
+
+    </script>
+    <!-- <script src="Giohang.css"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve the productOrders from localStorage
+            const productOrders = JSON.parse(localStorage.getItem('productOrders')) || [];
+        
+            // Merge items with the same name
+            const mergedOrders = productOrders.reduce((acc, product) => {
+                const existingProduct = acc.find(item => item.name === product.name);
+                if (existingProduct) {
+                    existingProduct.quantity += product.quantity;
+                } else {
+                    acc.push({ ...product });
+                }
+                return acc;
+            }, []);
+        
+            // Function to format price
+            function formatPrice(price) {
+                return parseInt(price.replace(/[^0-9]/g, ''), 10);
+            }
+        
+            // Function to update total price
+            function updateTotalPrice() {
+                const total = Array.from(document.querySelectorAll('.total-column'))
+                    .reduce((sum, totalColumn) => {
+                        return sum + formatPrice(totalColumn.innerText);
+                    }, 0);
+                document.getElementById('totalPrice').innerText = total.toLocaleString() + '₫';
+            }
+        
+            // Function to create a cart item element
+            function createCartItem(product) {
+                const price = formatPrice(product.price);
+                const quantity = product.quantity;
+                const total = price * quantity;
+        
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <div class="product-column">
+                        <img src="${product.photo}" alt="${product.name}">
+                    </div>
+                    <div class="description-column">${product.name}</div>
+                    <div class="price-column">${product.price}</div>
+                    <div class="quantity-column">
+                        <input type="number" value="${quantity}" min="1">
+                    </div>
+                    <div class="total-column">${total.toLocaleString()}₫</div>
+                    <div class="remove-column">
+                        <button>🗑️</button>
+                    </div>
+                `;
+        
+                // Event listener to update total when quantity changes
+                const quantityInput = cartItem.querySelector('.quantity-column input');
+                quantityInput.addEventListener('input', (event) => {
+                    const newQuantity = parseInt(event.target.value, 10);
+                    if (isNaN(newQuantity) || newQuantity < 1) {
+                        event.target.value = quantity;
+                        return;
+                    }
+                    product.quantity = newQuantity;
+                    const newTotal = price * newQuantity;
+                    cartItem.querySelector('.total-column').innerText = newTotal.toLocaleString() + '₫';
+                    updateTotalPrice();
+                    localStorage.setItem('productOrders', JSON.stringify(mergedOrders));
+                });
+        
+                // Event listener to remove item
+                const removeButton = cartItem.querySelector('.remove-column button');
+                removeButton.addEventListener('click', () => {
+                    const index = mergedOrders.findIndex(item => item.name === product.name);
+                    if (index !== -1) {
+                        mergedOrders.splice(index, 1);
+                        cartItem.remove();
+                        updateTotalPrice();
+                        localStorage.setItem('productOrders', JSON.stringify(mergedOrders));
+                    }
+                });
+        
+                return cartItem;
+            }
+        
+            // Get the cartItems container
+            const cartItemsContainer = document.getElementById('cartItems');
+        
+            // Generate cart items
+            mergedOrders.forEach(product => {
+                const cartItem = createCartItem(product);
+                cartItemsContainer.appendChild(cartItem);
+            });
+        
+            // Update the total price initially
+            updateTotalPrice();
+        
+            // Save merged orders back to localStorage
+            localStorage.setItem('productOrders', JSON.stringify(mergedOrders));
+        });
+        </script>
+        
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const emptyCart = document.getElementById("emptyCart");
+        const cartContent = document.getElementById("cartContent");
+
+        // Lấy số lượng sản phẩm từ localStorage (hoặc 0 nếu chưa có)
+        const cartItemCount = parseInt(localStorage.getItem("cartCount")) || 0;
+
+        // Kiểm tra số lượng và cập nhật hiển thị
+        if (cartItemCount === 0) {
+            emptyCart.style.display = "block";
+            cartContent.style.display = "none";
+        } else {
+            emptyCart.style.display = "none";
+            cartContent.style.display = "block";
+        }
+    });
+
+    </script>
+
 </head>
 <body>
     <div id="header"></div> 
@@ -17,14 +149,68 @@
         });
 
     </script>
-    
+
     <div id="cart-list-item">
         <h2>GIỎ HÀNG</h2>
+
         <div id="emptyCart">
-            <img src="empty-cart-icon.png" alt="Giỏ hàng trống"> 
+            <img src="Image/cart/cart-empty.png" alt="Giỏ hàng trống"> 
             <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
+            <a href="index.html" id="continueShopping">TIẾP TỤC MUA HÀNG</a>
+
         </div>
-        <a href="index.html" id="continueShopping">TIẾP TỤC MUA HÀNG</a>
+
+        <div id="cartContent">       
+            <div id="cartContent">
+                <div class="cart-header">
+                    <span class="product-column">Sản phẩm</span>
+                    <span class="description-column">Mô Tả</span>
+                    <span class="price-column">Giá</span>
+                    <span class="quantity-column">Số Lượng</span>
+                    <span class="total-column">Tổng</span>
+                    <span class="remove-column">Xóa</span>
+                </div>
+            
+                <div id="cartItems">
+                    <!-- Items will be dynamically generated here -->
+                </div> 
+            
+                <div class="cart-footer">
+                    <div class="total-price">
+                        Tổng: <span id="totalPrice">0₫</span>
+                    </div>
+                    <div class="cart-actions">
+                        <button id="continueShopping">TIẾP TỤC MUA SẮM</button>
+                        <button id="checkout">THANH TOÁN</button>
+                    </div>
+                </div>
+                
+                <div id="notes">
+                    <h3>Chú Thích</h3>
+                    <textarea placeholder="Bạn muốn mô tả rõ hơn về đơn hàng..."></textarea>
+                </div>
+                <div id="installmentOption">
+                    <h3>MUA TRẢ GÓP QUA THẺ TÍN DỤNG</h3>
+                    <div>
+                        <input type="radio" id="installmentOption1" name="installmentOption" checked>
+                        <label for="installmentOption1">
+                            Chọn hình thức: Thanh toán thẻ - Trả góp (Lưu ý: LH nhân viên để kiểm tra tồn kho sản phẩm trước khi thanh toán)
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" id="installmentOption2" name="installmentOption">
+                        <label for="installmentOption2">
+                            Chọn loại thẻ phù hợp với nhu cầu, nhập thông tin, sau đó tiến hành thanh toán
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+
     </div>
     <script src="script.js"></script> 
     
