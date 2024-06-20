@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/Index/favicon.png" type="image/png">
+    <title>Tài khoản - Tin Học Ngôi Sao</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <script src="jquery-3.7.1.min.js"></script> 
+    <script src="app.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <div id="top-content">
+            <p id="logo">
+                <img src="Image/Linhkien/logo.png" alt="Logo">
+            </p>
+            <div id="search-bar">
+                <input id="searchbar" type="text" placeholder="Bạn tìm gì...">
+                <button id="searchbutton">Tìm kiếm</button>
+            </div>
+            <div class="header-actions">
+                <div id="login-signin">
+                    <a href="Login.html">
+                        <span>Đăng nhập/Đăng ký</span><br>
+                        <span id="account">
+                            <b>Tài khoản</b>
+                        </span>
+                    </a>
+                    <div id="login-menu">
+                        <a href="#" onclick="showLoginPopup(event)">Đăng nhập</a>
+                        <a href="#">Tạo tài khoản</a>
+                        <a href="#" onclick="openFacebookLoginPopup()" class="social-login">
+                            <img src="Image/Icon/Facebook.png" alt="Facebook"> Đăng nhập bằng Facebook
+                        </a>
+                        <a href="#" onclick="openGoogleLoginPopup()" class="social-login">
+                            <img src="Image/Icon/Google.png" alt="Google"> Đăng nhập bằng Google
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Popup Đăng nhập -->
+                <div id="login-popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="closeLoginPopup()">&times;</span>
+                        <div class="popup-left">
+                            <h2>Xin chào,</h2>
+                            <p>Đăng nhập hoặc <a href="#">Tạo tài khoản</a></p>
+                            <form>
+                                <label for="email">Email của bạn</label>
+                                <input type="email" id="email" name="email" required>
+                                <label for="password">Nhập mật khẩu</label>
+                                <input type="password" id="password" name="password" required>
+                                <a href="#">Quên mật khẩu?</a>
+                                <button type="submit" class="login-btn">Đăng nhập</button>
+                            </form>
+                            <p>Hoặc tiếp tục bằng</p>
+                            <div class="social-login">
+                                <a href="#" onclick="openGoogleLoginPopup()">
+                                    <img src="Image/Icon/Google.png" alt="Google">
+                                </a>
+                                <a href="#" onclick="openFacebookLoginPopup()">
+                                    <img src="Image/Icon/Facebook.png" alt="Facebook">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="popup-right">
+                            <img src="Image/Index/Login-banner.png" alt="Login Illustration">
+                        </div>
+                    </div>
+                </div>
+                <div id="cart">
+                    <a href="#">
+                        <span>
+                            <b>Giỏ hàng(0)</b>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-menu">
+        <div id="danhmucsp">
+            <span><b><strong><img src="Image/Icon/Menu.png" alt="">DANH MỤC SẢN PHẨM</strong></b>
+                <div id="menu-item">
+                    <a id="promo-link" href="#"><img src="Image/Icon/quatang.png" alt="Promo"><span>Tổng Hợp Khuyến Mãi</span></a>
+                    <a id="new-parts-link" href="#"><img src="Image/Icon/cpu.png" alt="New Parts"><span>Linh Kiện Mới</span></a>
+                    <a id="old-parts-link" href="#"><img src="Image/Icon/ram.png" alt="Old Parts"><span>Linh Kiện Cũ</span></a>
+                    <a id="storage-link" href="#"><img src="Image/Icon/ssd.png" alt="Storage"><span>SSD - HDD - USB</span></a>
+                    <a id="laptop-link" href="#"><img src="Image/Icon/laptop.png" alt="Laptop"><span>Laptop</span></a>
+                    <a id="gaming-pc-link" href="#"><img src="Image/Icon/pc.png" alt="Gaming PC"><span>PC Gaming - Học Tập</span></a>
+                    <a id="office-pc-link" href="#"><img src="Image/Icon/pc.png" alt="Office PC"><span>PC Văn Phòng - Làm Việc</span></a>
+                    <a id="design-pc-link" href="#"><img src="Image/Icon/pc.png" alt="Design PC"><span>PC Đồ Họa - Thiết Kế</span></a>
+                    <a id="monitor-link" href="#"><img src="Image/Icon/manhinh.png" alt="Monitor"><span>Màn Hình Máy Tính</span></a>
+                    <a id="accessories-link" href="#"><img src="Image/Icon/daysac.png" alt="Accessories"><span>Phụ Kiện & Phần Mềm</span></a>
+                    <a id="gaming-furniture-link" href="#"><img src="Image/Icon/ghe.png" alt="Gaming Furniture"><span>Bàn, Ghế Gaming</span></a>
+                    <a id="peripherals-link" href="#"><img src="Image/Icon/phimchuot.png" alt="Peripherals"><span>Phím, Chuột, Tai Nghe</span></a>
+                    <a id="networking-link" href="#"><img src="Image/Icon/wifi.png" alt="Networking"><span>Thiết Bị Mạng</span></a>
+                    <a id="audio-link" href="#"><img src="Image/Icon/loa.png" alt="Audio"><span>Thiết bị âm thanh</span></a>
+                    <a id="camera-link" href="#"><img src="Image/Icon/mayin.png" alt="Camera"><span>Camera, Webcam, Máy in</span></a>
+                </div>
+            </span>
+        </div>
+        <div id="sub-menu">
+            <ul>
+                <li><a href="#"><img src="Image/Icon/icon_nav_1.png" alt="">Lắp đặt phòng net</a></li>
+                <li><a href="#"><img src="Image/Icon/icon_nav_2.png" alt="">Trả góp</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="#"><img src="Image/Icon/icon_nav_3.png" alt="">Bảng giá</a>
+                    <div id="dropdown-menu2">
+                        <a href="#">Bảng giá mua cũ</a><br>
+                        <a href="#">Bảng giá bán</a><br>
+                        <a href="#">Bảng giá Outlet</a><br>
+                    </div>
+                </li>
+                <li><a href="#"><img src="Image/Icon/icon_nav_4.png" alt="">Xây dựng cấu hình</a></li>
+                <li><a href="#"><img src="Image/Icon/icon_nav_5.png" alt="">Chính sách bảo hành</a></li>
+                <li><a href="#"><img src="Image/Icon/icon_nav_6.png" alt="">Thiết bị mining</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    
+</header>
+<script>
+    // JavaScript to disable hover effect on index.html
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.pathname.endsWith('index.html')) {
+            const danhMucSp = document.getElementById('danhmucsp');
+            danhMucSp.addEventListener('mouseenter', function(event) {
+                event.stopPropagation();
+                // Prevent the menu from showing
+            });
+            danhMucSp.addEventListener('mouseleave', function(event) {
+                event.stopPropagation();
+                // Ensure the menu stays hidden
+            });
+        }
+    });
+</script>
+</body>
+</html>

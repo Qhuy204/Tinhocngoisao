@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/Index/favicon.png" type="image/png">
+    <title>Thông tin sản phẩm</title>
+    <link rel="stylesheet" href="Thongtinsp.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="show-specs.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <div id="main">
+        <div id="multilevel-link">
+            <p><a href="index.html">Trang chủ</a> / <a href="#">PC Gaming</a> / PC Gaming STAR CHICKEN AETHER | I7 11700K, RTX 3070</p>
+        </div>
+        <div id="product-name">
+            <h2 autofocus>PC Gaming STAR CHICKEN AETHER | I7 11700K, RTX 3070</h2>
+            <div id="product-rating">
+                <span>0 đánh giá</span>
+                <button id="like-button">Thích 0</button>
+                <button onclick="fbshareurlPopup()" id="share-button">Chia sẻ</button>
+            </div>
+        </div>
+
+
+        <div id="separator">
+
+        </div>
+        <div id="product-details">
+            <div id="product-details-left">
+                <div id = "image-section">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-PC/m1.png" alt="Laptop Gaming Acer Nitro 5 Tiger AN515" id="main-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-PC/m2.png" alt="Image 2" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-PC/m3.png" alt="Image 3" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-PC/m10.png" alt="Image 4" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-PC/m8.png" alt="Image 5" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-PC/m6.png" alt="Image 6" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-PC/m9.png" alt="Image 7" style="width:100%">
+                </div>
+            
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                </div>
+            </div>
+                <div id="box-criterion">
+                    <span class="imgthumb">
+                        <img src="Image/Chitietsp/diemnoibat.png" alt="Điểm nổi bật">
+                    </span>
+                    <span  class="imgthumb">
+                        <img src="Image/Chitietsp/thongso.png" alt="Thông số">
+                    </span>
+                    <span class="imgthumb">
+                        <img src="Image/Chitietsp/iconarticle.png" alt="Bài viết đánh giá">
+                    </span>
+                </div>
+                <div id="box-criterion-details">
+                    <a href="#">Điểm nổi bật</a>
+                    <a href="#">Thông số <br>kỹ thuật</a>
+                    <a href="#">Bài viết <br>đánh giá</a>
+                </div>
+
+                <div id = "Chinhsach">
+                    <div id = "Chinhsach-left">
+                        <li><img src="Image/Chitietsp/product_policy_1.png" alt="Policy 1"><span>Chính sách bảo hành <a href="#">Xem chi tiết</a></span></li>
+                        <li><img src="Image/Chitietsp/product_policy_2.png" alt="Policy 2"><span>Cam kết chính hãng 100%</span></li>
+                    </div>
+                    <div id = "Chinhsach-right">
+                        <li><img src="Image/Chitietsp/product_policy_3.png" alt="Policy 3"><span>Bảo hành: 12 tháng</span></li>
+                        <li><img src="Image/Chitietsp/product_policy_4.png" alt="Policy 4"><a href="#">1900 0243</a></li>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <div id="product-details-right">
+                <div id="product-info">
+                    <p class="price">36,800,000₫</p>
+                    <p class="product-code"><b>Mã sản phẩm</b>: MB.CHICKEN.AETHER</p>
+
+                    <div class="promotions">
+                        <h2>KHUYẾN MÃI "BỨT PHÁ MÙA THI" TỪ NGÀY 20.06 ĐẾN 05.07 <a href="#">TẠI ĐÂY</a></h2>
+                        <ul>
+                            <li>Miễn phí nâng cấp thêm Ram R4.LT.8G.3200.GK.KTN</li>
+                            <li>Chương trình KM độc lập, không áp dụng chung với các chương trình khuyến mãi khác</li>
+                            <li>Trả góp 0% lãi suất, Đổi trả trong 7 ngày</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div id="all-specs">
+                        <div class="product-specs">
+                            <div id="thongsokt">
+                                <p>THÔNG SỐ KỸ THUẬT</p>
+                            </div>
+                            <div id="specs-content">
+                                <table>
+                                    <tr>
+                                        <th>CPU:</th>
+                                        <td>CPU Intel Core I7 11700K | LGA1200, Turbo 5.0 GHz, 8C/16T, 18MB, TRAY, Không Fan</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ram:</th>
+                                        <td>	Ram PC Adata XPG Spectrix D50 8GB DDR4 3200Mhz RGB White x2</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ổ cứng:</th>
+                                        <td>Ổ Cứng SSD 512GB Patriot P300 M2 2280 NVMe
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Card đồ họa:</th>
+                                        <td>Card màn hình VGA GIGABYTE GeForce RTX 3070 WindForce OC 8G (rev. 1.0)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mainboard:</th>
+                                        <td>Mainboard Colorful BATTLE-AX H610M-E WIFI V20 | Intel H610, Socket 1700, M-ATX, 2 khe DDR4</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nguồn:</th>
+                                        <td>Nguồn FSP HV PRO 85+ 650W</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Case:</th>
+                                        <td>Case MIK Aether Gaming - Đen | Không kèm fan</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nguồn:</th>
+                                        <td>Tản nhiệt khí CPU Leopard KF400 Led RGB - Đen</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="more-details">
+                                <a id="show-details-button">Xem thêm cấu hình chi tiết</a>
+                            </div>
+
+                            <div id="popup" style="display: none;">
+                                <iframe src="All-specs-PC.html" width="800" height="600"></iframe>
+                                <button id="close-popup">x</button>
+                            </div>
+
+
+                            <div id="message-container"></div>
+
+                            <div class="purchase-options">
+                                <div id="Buy">
+                                    <button id="buy-now">MUA NGAY</button>
+                                </div>
+                                <div id="cart-installment">
+                                    <button id="add-to-cart">THÊM VÀO GIỎ HÀNG</button>
+                                    <button id="installment">TRẢ GÓP 0% QUA THẺ</button>
+                                </div>
+                                <div id = "call">
+                                    <p>Gọi đặt mua <a href="#">1900 0243</a> (8:30 - 21:00)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id = "product-description">
+            <h2>MÔ TẢ SẢN PHẨM</h2>
+            <h3>CPU Intel Core i7 11700K Tray | 5.0 GHz, 8 Cores 16 Threads, LGA 1200</h3>
+            <p>Intel Core i5-12400F là một lựa chọn mạnh mẽ và hiệu quả trong phân khúc CPU tầm trung, được thiết kế theo kiến trúc Alder Lake-S và sản xuất trên tiến trình 10nm. CPU này có 6 nhân và 12 luồng, với xung nhịp cơ bản 2.5GHz và có thể tăng tối đa lên đến 4.4GHz. Đây là bản nâng cấp đáng kể so với thế hệ trước, mang lại hiệu năng mạnh mẽ cho cả các tác vụ đơn và đa luồng. </p>
+            <img src="Image/Chitietsp-PC/cpu.png" alt="img1">
+            <p>Core i5-12400F mang lại hiệu năng ấn tượng trong nhiều bài kiểm tra benchmark, cho thấy khả năng xử lý mượt mà các ứng dụng đòi hỏi cao như đồ họa và các tựa game nặng​​. Trong các bài kiểm tra, CPU này vượt trội hơn so với nhiều đối thủ cạnh tranh và cho thấy hiệu suất tương đương với Ryzen 5 5600X nhưng có giá cạnh tranh hơn. Đây là một sự lựa chọn lý tưởng cho những ai cần một CPU mạnh mẽ trong phân khúc tầm trung. Với hiệu năng cao, khả năng tương thích tốt và hỗ trợ công nghệ mới, nó đáp ứng tốt các nhu cầu từ chơi game đến công việc chuyên nghiệp</p>
+            <h3>Mainboard Colorful BATTLE-AX H610M-E WIFI V20 | Intel H610, M-ATX, 2 khe DDR</h3>
+            <p>Mainboard Colorful BATTLE-AX H610M-E WIFI V20 là một bo mạch chủ thuộc phân khúc tầm trung, phù hợp với các bộ vi xử lý Intel thế hệ 12 và 13. Được thiết kế với kích thước Micro-ATX, nó cung cấp một sự cân bằng tốt giữa tính năng và giá cả, lý tưởng cho phân khúc phổ thông và chơi game.</p>
+            <img src="Image/Chitietsp-PC/main.png" alt="img2">
+            <p>Chipset và CPU hỗ trợ: Intel H610, hỗ trợ CPU Intel thế hệ 12 và 13 (LGA 1700), bao gồm các dòng Core, Pentium và Celeron​​
+                <br>- Khe cắm RAM: 2 khe DDR4, hỗ trợ tối đa 64GB với tốc độ lên đến 3200MHz (OC)​.
+                <br>- Kết nối mạng: Card mạng Gigabit RTL8111H và module WiFi 5 (RTL8821CE/AC3165), hỗ trợ Bluetooth 4.2​ ​.
+                <br>- Lưu trữ: 1 khe M.2 PCIe 3.0 x4 và 4 cổng SATA 6Gb/s, cung cấp nhiều tùy chọn lưu trữ tốc độ cao​.
+                <br>- Khe cắm mở rộng: 1 khe PCIe 4.0 x16 và 1 khe PCIe 3.0 x1​​.
+                <br>Mainboard Colorful BATTLE-AX H610M-E WIFI V20 là một lựa chọn tuyệt vời cho những ai cần một bo mạch chủ đáng tin cậy, hiệu năng tốt với giá cả hợp lý. Nó phù hợp cho cả nhu cầu sử dụng hàng ngày và chơi game cơ bản, với nhiều tính năng hiện đại như WiFi 5, Bluetooth 4.2 và hỗ trợ RAM DDR4 tốc độ cao.</p>
+            <h3>Ram PC Adata XPG Spectrix D50 8GB DDR4 3200Mhz RGB White</h3>
+            <p>RAM Adata XPG Spectrix D50 có tốc độ 3200MHz và độ trễ CL16-20-20, mang lại hiệu năng mạnh mẽ trong cả các bài kiểm tra tổng hợp lẫn ứng dụng thực tế. Đây là một lựa chọn lý tưởng cho các game thủ và người dùng cần đa nhiệm hiệu quả. RAM này cũng hỗ trợ Intel XMP 2.0, giúp dễ dàng ép xung mà không cần phải cấu hình BIOS thủ công.</p>
+            <img src="Image/Chitietsp-PC/ram.png" alt="img3">
+            <p>
+                RAM Adata XPG Spectrix D50 có thiết kế hiện đại với bộ tản nhiệt kim loại màu trắng, giúp cải thiện khả năng tản nhiệt. Trang bị hệ thống đèn LED RGB với khả năng tùy chỉnh thông qua các phần mềm RGB Sync của các hãng bo mạch chủ lớn như ASUS Aura Sync, MSI Mystic Light Sync, Gigabyte RGB Fusion, và ASRock Polychrome Sync. Điều này cho phép người dùng tạo ra các hiệu ứng ánh sáng đa dạng và đồng bộ với các thành phần khác trong hệ thống
+                <br>RAM Adata XPG Spectrix D50 8GB DDR4 3200MHz RGB White là một lựa chọn tốt cho những ai tìm kiếm sự kết hợp giữa hiệu năng, thẩm mỹ và giá trị. Với tốc độ cao, khả năng ép xung dễ dàng, thiết kế đẹp mắt và hệ thống RGB tùy chỉnh, nó phù hợp với cả người dùng thông thường và game thủ.
+            </p>
+            <h3>SSD 512GB Patriot P300 M2 2280 NVMe</h3>
+            <p>Patriot P300 512GB M.2 2280 NVMe là một SSD giá rẻ, hướng tới người dùng phổ thông và game thủ cần nâng cấp hiệu suất lưu trữ mà không phải đầu tư quá nhiều. Với giao diện PCIe 3.0 x4 và chuẩn NVMe 1.3, ổ cứng này mang lại sự cân bằng tốt giữa giá cả và hiệu suất.
+                <br>Tốc độ đọc/ghi tuần tự: Ổ cứng có thể đạt tốc độ đọc tuần tự lên đến 1,700 MB/s và ghi tuần tự lên đến 1,100 MB/s. Đây là mức tốc độ khá tốt cho một SSD PCIe 3.0 x4 trong tầm giá.</p>
+            <img src="Image/Chitietsp-PC/ssd.png" alt="img4">
+            <p>
+                Các tính năng có trong SSD Patriot P300 512GB M.2 2280 NVMe bao gồm:
+                <br>- SLC Caching: Tính năng này giúp tăng hiệu suất ghi bằng cách sử dụng một phần NAND như là bộ nhớ SLC, tốc độ ghi nhanh hơn​​.
+                <br>- Quản lý nhiệt: Ổ cứng có khả năng điều chỉnh nhiệt để ngăn chặn hiện tượng quá nhiệt, đảm bảo hiệu suất ổn định ngay cả khi tải nặng​​.
+                <br>- Bảo vệ dữ liệu: Hỗ trợ các tính năng bảo vệ dữ liệu tiên tiến như bảo vệ đường dẫn dữ liệu đầu cuối, SmartECC và thuật toán sửa lỗi LDPC, giúp duy trì tính toàn vẹn dữ liệu và kéo dài tuổi thọ của ổ cứng​​.
+                <br>- SLC Caching: Tính năng này giúp tăng hiệu suất ghi bằng cách sử dụng một phần NAND như là bộ nhớ SLC, tốc độ ghi nhanh hơn​​.
+                <br>Patriot P300 512GB M.2 2280 NVMe là một lựa chọn tốt cho những ai tìm kiếm một ổ cứng SSD NVMe với giá cả hợp lý. Với hiệu suất tốt, các tính năng bảo vệ dữ liệu tiên tiến và thiết kế nhỏ gọn, nó phù hợp cho cả người dùng phổ thông và game thủ.
+            </p>
+
+            <h3>VGA GIGABYTE GeForce RTX 3070 WindForce OC 8G (rev. 1.0)</h3>
+            <p>GIGABYTE GeForce RTX 3060 WindForce OC 12G mang lại hiệu suất đáng tin cậy cho các tựa game hiện đại ở độ phân giải 1080p và 1440p. VGA được trang bị kiến trúc Ampere của NVIDIA với 3584 nhân CUDA, xung nhịp tăng lên đến 1807 MHz và 12GB bộ nhớ GDDR6. Trong các bài kiểm tra, card thể hiện tốt ở cả hai độ phân giải, đảm bảo trải nghiệm chơi game mượt mà và ổn định</p>
+            <img src="Image/Chitietsp-PC/gpu.png" alt="img5">
+            <p>
+                Hệ thống làm mát WindForce của GIGABYTE bao gồm ba quạt quay ngược chiều, tấm đồng lớn và các ống dẫn nhiệt composite, giúp tản nhiệt hiệu quả và giữ nhiệt độ card ở mức ổn định ngay cả khi tải nặng. Điều này đảm bảo card không bị quá nhiệt, duy trì hiệu suất ổn định trong thời gian dài​.Phiên bản WindForce OC được ép xung sẵn từ nhà máy, mang lại hiệu năng tốt hơn so với phiên bản gốc. Ngoài ra, card cũng có khả năng ép xung thêm, cho phép người dùng tùy chỉnh hiệu suất theo ý muốn mà không gặp vấn đề về nhiệt độ quá cao
+                <br>RTX 3060 hỗ trợ ray tracing thời gian thực và DLSS (Deep Learning Super Sampling), giúp nâng cao chất lượng hình ảnh và duy trì tốc độ khung hình ổn định trong các game hỗ trợ. DLSS đặc biệt hữu ích trong các tựa game nặng như Cyberpunk 2077 và Red Dead Redemption 2, cung cấp hiệu suất tăng đáng kể khi bật tính năng này
+                <br>GIGABYTE GeForce RTX 3060 WindForce OC 12G là một lựa chọn tốt cho những người dùng muốn nâng cấp hệ thống để chơi game ở độ phân giải 1080p và 1440p với hiệu suất ổn định và chất lượng hình ảnh cao. Hệ thống tản nhiệt hiệu quả, khả năng ép xung tốt và hỗ trợ ray tracing và DLSS làm cho card này trở thành một giải pháp hợp lý cho các game thủ tầm trung
+            </p>
+            <h3>Nguồn FSP HV PRO 85+ 650W</h3>
+            <p>Đánh giá "85+" thường đề cập đến hiệu suất của nguồn, có nghĩa là nó có hiệu suất 85% hoặc cao hơn ở nhiều điều kiện tải khác nhau. Điều này có nghĩa là ít năng lượng sẽ bị lãng phí và ít nhiệt sẽ được tạo ra, giúp tiết kiệm điện năng và kéo dài tuổi thọ của các thành phần.
+                <br>Với công suất 650W, nó thích hợp cho hầu hết các hệ thống máy tính tiêu chuẩn và cung cấp đủ điện để chạy các linh kiện cao cấp như card đồ họa mạnh mẽ hoặc CPU có hiệu suất cao. Điều này làm cho nó trở thành một sự lựa chọn phổ biến trong cộng đồng xây dựng máy tính.</p>
+            <img src="Image/Chitietsp-PC/nguon.png" alt="img6">
+            <h3>Case MIK Aether Gaming - Đen | Không kèm fan</h3>
+            <p>Thùng máy Case MIK Aether Gaming là một lựa chọn phổ biến cho những người xây dựng máy tính muốn một vỏ máy có thiết kế hiện đại và tiện ích. "Aether Gaming" có thể chỉ đến sự linh hoạt trong việc tạo ra không gian không khí tốt và sẵn sàng cho các hệ thống chơi game.
+                <br>Với màu đen, nó có vẻ sang trọng và phù hợp với nhiều loại bàn và không gian làm việc. Đặc biệt, việc không kèm theo quạt đi kèm cho phép người dùng tự do lựa chọn các quạt phù hợp với nhu cầu làm mát của họ hoặc tích hợp hệ thống làm mát nước tùy chỉnh.
+                
+                </p>
+            <img src="Image/Chitietsp-PC/case.png" alt="img7">
+            <h3>Tản nhiệt khí CPU Leopard KF400 Led RGB</h3>
+            <p>Tản nhiệt khí CPU Leopard KF400 Led RGB là một giải pháp làm mát hiệu suất cao cho việc làm mát CPU trong các hệ thống máy tính. Thiết kế đen với đèn LED RGB mang lại một cái nhìn hiện đại và phong cách cho hệ thống của bạn.</p>
+            <img src="Image/Chitietsp-PC/fan.png" alt="img8">
+            <p>Với một bộ tản nhiệt khí mạnh mẽ, Leopard KF400 có khả năng xử lý tải công việc nặng và giữ cho CPU của bạn luôn mát mẻ, giúp tăng hiệu suất và độ ổn định của hệ thống. Thiết kế cải tiến cũng có thể giúp giảm tiếng ồn khi hoạt động, cung cấp một môi trường làm việc yên tĩnh hơn.
+                <br>Đèn LED RGB cho phép bạn tùy chỉnh ánh sáng để phù hợp với phong cách tổng thể của hệ thống của bạn hoặc để phối hợp với các hiệu ứng ánh sáng khác trong máy tính của bạn. Điều này không chỉ tạo ra một cái nhìn đẹp mắt mà còn tăng thêm sự cá nhân hóa cho hệ thống máy tính của bạn.</p>
+        </div>
+
+        </div>
+        <div id="footer"></div>
+        <script>
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+</body>
+
+</html>

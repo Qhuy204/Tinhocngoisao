@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Image/Index/favicon.png" type="image/png">
+        <title>Tin Học Ngôi Sao</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.7.1.min.js"></script> 
+        <script src="app.js"></script>
+    </head>
+<body>
+    <div id="header"></div> 
+   
+
+    <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        });
+
+    </script>
+
+    <main>
+        <div id="main-body">
+            <div id="main-top">
+                <div id="main-ads1">
+                    <div id="sidebar">
+                        <a id="promo-link" href="#"><img src="Image/Icon/quatang.png" alt="Promo"><span>Tổng Hợp Khuyến Mãi</span></a>
+                        <a id="new-parts-link" href="#"><img src="Image/Icon/cpu.png" alt="New Parts"><span>Linh Kiện Mới</span></a>
+                        <a id="old-parts-link" href="#"><img src="Image/Icon/ram.png" alt="Old Parts"><span>Linh Kiện Cũ</span></a>
+                        <a id="storage-link" href="#"><img src="Image/Icon/ssd.png" alt="Storage"><span>SSD - HDD - USB</span></a>
+                        <a id="laptop-link" href="#"><img src="Image/Icon/laptop.png" alt="Laptop"><span>Laptop</span></a>
+                        <a id="gaming-pc-link" href="#"><img src="Image/Icon/pc.png" alt="Gaming PC"><span>PC Gaming - Học Tập</span></a>
+                        <a id="office-pc-link" href="#"><img src="Image/Icon/pc.png" alt="Office PC"><span>PC Văn Phòng - Làm Việc</span></a>
+                        <a id="design-pc-link" href="#"><img src="Image/Icon/pc.png" alt="Design PC"><span>PC Đồ Họa - Thiết Kế</span></a>
+                        <a id="monitor-link" href="#"><img src="Image/Icon/manhinh.png" alt="Monitor"><span>Màn Hình Máy Tính</span></a>
+                        <a id="accessories-link" href="#"><img src="Image/Icon/daysac.png" alt="Accessories"><span>Phụ Kiện & Phần Mềm</span></a>
+                        <a id="gaming-furniture-link" href="#"><img src="Image/Icon/ghe.png" alt="Gaming Furniture"><span>Bàn, Ghế Gaming</span></a>
+                        <a id="peripherals-link" href="#"><img src="Image/Icon/phimchuot.png" alt="Peripherals"><span>Phím, Chuột, Tai Nghe</span></a>
+                        <a id="networking-link" href="#"><img src="Image/Icon/wifi.png" alt="Networking"><span>Thiết Bị Mạng</span></a>
+                        <a id="audio-link" href="#"><img src="Image/Icon/loa.png" alt="Audio"><span>Thiết bị âm thanh</span></a>
+                        <a id="camera-link" href="#"><img src="Image/Icon/mayin.png" alt="Camera"><span>Camera, Webcam, Máy in</span></a>
+                    </div>
+                </div>
+
+                
+
+                <div id="main-ads2">
+                    <div id="ads-top">
+                        <div class="ads1">
+                            <div class="slideshow-container">
+                                <div class="mySlides fade">
+                                  <img src="Image/Index/mainbanner.png" style="width:100%">
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <img src="Image/Index/mainbanner2.png" style="width:100%">
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <img src="Image/Index/mainbanner3.png" style="width:100%">
+                                </div>
+                                
+                                <!-- Next and previous buttons -->
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                              </div>
+                              
+                              <br>
+                              
+                              <div style="text-align:center; margin-top: -20px;">
+                                <span class="dot" onclick="currentSlide(1)"></span> 
+                                <span class="dot" onclick="currentSlide(2)"></span> 
+                                <span class="dot" onclick="currentSlide(3)"></span> 
+                              </div>
+                                
+                        </div>
+                        <div class="ads2">
+                            <div class="ads-right">
+                                <img src="Image/Index/banner_right_1.jpg" style="width:100%">
+                                <img src="Image/Index/banner_right_2.jpg" style="width:100%" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ads-bottom">
+                        <img src="Image/Index/banner_right_3.jpg" alt="">
+                        <img src="Image/Index/banner_right_4.jpg" alt="">
+                        <img src="Image/Index/banner_right_5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="mid-banner">
+                <img src="Image/Index/banner_home_1_master.jpg" alt="">
+                <img src="Image/Index/banner_home_2_master.jpg" alt="">
+                <img src="Image/Index/banner_home_3_master.jpg" alt="">
+                <img src="Image/Index/banner_home_4_master.jpg" alt="">
+            </div>
+            <div class="product-list">
+                <div class="product-banner">
+                    <span>PC GAMING</span>
+                    <div class="menu">
+                        <a href="PC.html">PC Gaming Standard</a>
+                        <a href="PC.html">PC Thiết kế/ Đồ họa</a>
+                        <a href="PC.html">PC Giả lập NOX</a>
+                        <a href="PC.html">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class = "temp">
+
+                </div>
+                <div class="product-content">
+                    <div class="product">
+                        <div class="product-header">
+                            <span class="gift">Bộ quà 400k</span>
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Gaming STAR CHICKEN MINI | GT 1030, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Gaming STAR CHICKEN MINI | GT 1030, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <span class="gift">Bộ quà 400k</span>
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Gaming STAR CHICKEN MINI | GT 1030, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Gaming STAR CHICKEN MINI | GT 1030, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Gaming STAR CHICKEN MINI | GT 1030, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Gaming STAR CHICKEN MINI | GT 1030, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <span class="gift">Bộ quà 400k</span>
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Gaming STAR CHICKEN MINI | GT 1030, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Gaming STAR CHICKEN MINI | GT 1030, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <span class="gift">Bộ quà 400k</span>
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Gaming STAR CHICKEN MINI | GT 1030, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Gaming STAR CHICKEN MINI | GT 1030, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Gaming STAR CHICKEN MINI | GT 1030, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Gaming STAR CHICKEN MINI | GT 1030, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="product-list">
+                <div class="product-banner">
+                    <span>PC VĂN PHÒNG</span>
+                    <div class="menu">
+                        <a href="PC.html">Máy bộ văn phòng</a>
+                        <a href="PC.html">Máy bộ hãng</a>
+                        <a href="PC.html">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class = "temp">
+
+                </div>
+                <div class="product-content">
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <span class="gift">Bộ quà 400k</span>
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <span class="gift">Bộ quà 400k</span>
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-header">
+                            <span class="gift">Bộ quà 400k</span>
+                            <img src="Image/PC/11_7df475efa9364c7d8cef56b6e86192a2_compact.png" alt="PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel">
+                        </div>
+                        <div class="product-info">
+                            <a href="#">PC Văn Phòng STAR | I5 10400/ RAM 8GB/ SSD 256GB, Intel</a>
+                            <p class="price">7,240,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i3 10105F</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> GT 1030</li>
+                                <li><img src="Image/Icon/ssd.png" alt="Motherboard"> H510M</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 16GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 256GB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="product-list">
+                <div class="product-banner">
+                    <span>LAPTOP GAMING</span>
+                    <div class="menu">
+                        <a href="laptopgaming.html">Laptop MSI</a>
+                        <a href="laptopgaming.html">Laptop Lenovo</a>
+                        <a href="laptopgaming.html">Laptop Acer</a>
+                        <a href="laptopgaming.html">Laptop Gigabyte</a>
+                        <a href="laptopgaming.html">Laptop Dell</a>
+                        <a href="laptopgaming.html">Laptop Asus</a>
+                        <a href="laptopgaming.html">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class = "temp">
+
+                </div>
+                <div class="product-content">
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Laptopgaming/laptopacernitrov15anv155158an6_b1829efc0fbc49bcb54614317d33fa9a_compact.png" alt="Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp.html">Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)</a>
+                            <p class="price">21,800,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i7 12700H</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> RTX 3050</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 8GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 512GB</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="SSD">15.6" FHD IPS 144Hz</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Laptopgaming/laptopacernitrov15anv155158an6_b1829efc0fbc49bcb54614317d33fa9a_compact.png" alt="Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp.html">Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)</a>
+                            <p class="price">21,800,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i7 12700H</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> RTX 3050</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 8GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 512GB</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="SSD">15.6" FHD IPS 144Hz</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Laptopgaming/laptopacernitrov15anv155158an6_b1829efc0fbc49bcb54614317d33fa9a_compact.png" alt="Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp.html">Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)</a>
+                            <p class="price">21,800,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i7 12700H</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> RTX 3050</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 8GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 512GB</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="SSD">15.6" FHD IPS 144Hz</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Laptopgaming/laptopacernitrov15anv155158an6_b1829efc0fbc49bcb54614317d33fa9a_compact.png" alt="Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp.html">Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)</a>
+                            <p class="price">21,800,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i7 12700H</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> RTX 3050</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 8GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 512GB</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="SSD">15.6" FHD IPS 144Hz</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Laptopgaming/laptopacernitrov15anv155158an6_b1829efc0fbc49bcb54614317d33fa9a_compact.png" alt="Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp.html">Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)</a>
+                            <p class="price">21,800,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i7 12700H</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> RTX 3050</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 8GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 512GB</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="SSD">15.6" FHD IPS 144Hz</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Laptopgaming/laptopacernitrov15anv155158an6_b1829efc0fbc49bcb54614317d33fa9a_compact.png" alt="Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp.html">Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)</a>
+                            <p class="price">21,800,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/cpu.png" alt="CPU"> i7 12700H</li>
+                                <li><img src="Image/Icon/cpu.png" alt="GPU"> RTX 3050</li>
+                                <li><img src="Image/Icon/ram.png" alt="RAM"> 8GB DDR4</li>
+                                <li><img src="Image/Icon/ssd.png" alt="SSD"> 512GB</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="SSD">15.6" FHD IPS 144Hz</li>
+                            </ul>
+                        </div>
+                    </div>   
+                                  
+                </div>
+            </div>
+
+            <div class="product-list">
+                <div class="product-banner">
+                    <span>MÀN HÌNH</span>
+                    <div class="menu">
+                        <a href="#">Màn hình 22"</a>
+                        <a href="#">Màn hình 24"</a>
+                        <a href="#">Màn hình 27"</a>
+                        <a href="#">Màn hình 75Hz</a>
+                        <a href="#">Màn hình 100Hz</a>
+                        <a href="#">Màn hình 144Hz</a>
+                        <a href="#">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class = "temp">
+
+                </div>
+                <div class="product-content">
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Monitor/m5.jpg" alt="Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp-mh.html">Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng</a>
+                            <p class="price">1,650,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/manhinh.png" alt="23.8inch"> 23.8 inch</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Full HD"> Full HD</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="IPS"> IPS</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="100Hz"> 100Hz</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Phẳng">Phẳng</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Monitor/m5.jpg" alt="Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp-mh.html">Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng</a>
+                            <p class="price">1,650,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/manhinh.png" alt="23.8inch"> 23.8 inch</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Full HD"> Full HD</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="IPS"> IPS</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="100Hz"> 100Hz</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Phẳng">Phẳng</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Monitor/m5.jpg" alt="Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp-mh.html">Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng</a>
+                            <p class="price">1,650,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/manhinh.png" alt="23.8inch"> 23.8 inch</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Full HD"> Full HD</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="IPS"> IPS</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="100Hz"> 100Hz</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Phẳng">Phẳng</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Monitor/m5.jpg" alt="Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp-mh.html">Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng</a>
+                            <p class="price">1,650,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/manhinh.png" alt="23.8inch"> 23.8 inch</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Full HD"> Full HD</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="IPS"> IPS</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="100Hz"> 100Hz</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Phẳng">Phẳng</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Monitor/m5.jpg" alt="Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp-mh.html">Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng</a>
+                            <p class="price">1,650,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/manhinh.png" alt="23.8inch"> 23.8 inch</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Full HD"> Full HD</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="IPS"> IPS</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="100Hz"> 100Hz</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Phẳng">Phẳng</li>
+                            </ul>
+                        </div>
+                    </div>   
+                    <div class="product">
+                        <div class="product-header">
+                            <img src="Image/Monitor/m5.jpg" alt="Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng">
+                        </div>
+                        <div class="product-info">
+                            <a href="Thongtinsp-mh.html">Màn hình VSP IP2403SB Trắng | 23.8 inch, Full HD, IPS, 100Hz, 1ms, phẳng</a>
+                            <p class="price">1,650,000đ</p>
+                            <ul>
+                                <li><img src="Image/Icon/manhinh.png" alt="23.8inch"> 23.8 inch</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Full HD"> Full HD</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="IPS"> IPS</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="100Hz"> 100Hz</li>
+                                <li><img src="Image/Icon/manhinh.png" alt="Phẳng">Phẳng</li>
+                            </ul>
+                        </div>
+                    </div>   
+                     
+                                  
+                </div>
+            </div>
+            
+           
+            <div class="category-container">
+                <div class="category-header">
+                  <h2>DANH MỤC SẢN PHẨM</h2>
+                  <div class="menu">
+                    <a href="#">Xem tất cả</a>
+                </div>
+                </div>
+                <div class="category-list">
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg1.png" alt="Card màn hình"><br>
+                    <a href="#">Card màn hình</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg3.png" alt="Bộ vi xử lý"><br>
+                    <a href="#">Bộ vi xử lý</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg4.png" alt="RAM"><br>
+                    <a href="#">RAM</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg2.png" alt="Bo mạch chủ"><br>
+                    <a href="#">Bo mạch chủ</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg9.png" alt="Ổ cứng"><br>
+                    <a href="#">Ổ cứng</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg11.png" alt="Nguồn"><br>
+                    <a href="#">Nguồn</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg10.png" alt="Vỏ case"><br>
+                    <a href="#">Vỏ case</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg8.png" alt="Màn hình"><br>
+                    <a href="#">Màn hình</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg12.png" alt="Bàn phím"><br>
+                    <a href="#">Bàn phím</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg13.png" alt="Chuột"><br>
+                    <a href="#">Chuột</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg14.png" alt="Tai nghe"><br>
+                    <a href="#">Tai nghe</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg16.png" alt="Loa"><br>
+                    <a href="#">Loa</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg20.png" alt="Webcam"><br>
+                    <a href="#">Webcam</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg15.png" alt="Ghế Gaming"><br>
+                    <a href="#">Ghế Gaming</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg19.png" alt="Bàn Gaming"><br>
+                    <a href="#">Phần mềm</a>
+                  </div>
+                  <div class="category-item">
+                    <img src="Image/Icon2/showinfozmimg17.png" alt="Thiết bị mạng"><br>
+                    <a href="#">Thiết bị mạng</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="product-list">
+                <div class="product-banner">
+                    <span>ƯU ĐÃI HOT</span>
+                    <div class="menu">
+                        <a href="#">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class="promotion-section">
+                    <div class="promotion">
+                        <img src="Image/Index/mainbanner2.png" alt="Summer Sale">
+                        <div class="promotion-info">
+                            <h3>SUMMER SALE | SALE KỊCH LIỆT - GIẢI NHIỆT MÙA HÈ</h3>
+                            <p>🧊 Đánh bay nắng hè, STAR tung bão sale >> giảm đến #PHẦN_NỬA_GIÁ ở #tất_cả_các_ngành_hàng: ✨ Săn HOT DEAL nhận ngay Vali HP/ điện...</p>
+                            <a href="#">Xem thêm »</a>
+                        </div>
+                    </div>
+                    <div class="promotion">
+                        <img src="Image/Index/banner_right_1.jpg" alt="Tuần lễ vàng">
+                        <div class="promotion-info">
+                            <h3>[VSP X STAR] TUẦN LỄ VÀNG - NGÀN QUÀ TẶNG</h3>
+                            <p>🎉 Tận hưởng vô vàn deal HOT ngày hè cùng VSP, nhận ưu đãi ĐỘC QUYỀN:• Tặng ngay #500K khi mua combo gaming (LCD + Case + Nguồn) ♦ Nhận combo...</p>
+                            <a href="#">Xem thêm »</a>
+                        </div>
+                    </div>
+                    <div class="promotion">
+                        <img src="Image/Index/slidegiovangnewfix_3c3c029b855146d2bda534e310a4a30f_grande.jpg" alt="Top bán chạy">
+                        <div class="promotion-info">
+                            <h3>TOP BÁN CHẠY - SALE TẬN ĐÁY</h3>
+                            <p>TOP BÁN CHẠY SĂN SALE HẾT SẢY >> tại đây Chào hè rực rỡ, STAR giảm giá hết cỡ >> giảm đến #PHẦN_NỬA_GIÁ ở #tất_cả_các_ngành_hàng: Tặng Vali HP...</p>
+                            <a href="#">Xem thêm »</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+              
+        </div>
+
+
+    </main>
+    
+    
+
+    <div id="footer"></div>
+    <script>
+        
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+</body>
+</html>

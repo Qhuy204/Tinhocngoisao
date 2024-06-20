@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Image/Index/favicon.png" type="image/png">
+        <title>Tài khoản - Tin Học Ngôi Sao</title>
+        <link rel="stylesheet" href="login-style.css">
+        <script src="jquery-3.7.1.min.js"></script> 
+        <script src="app.js"></script>
+    </head>
+<body>
+    <div id="header"></div> 
+    <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('header').innerHTML = data;
+        });
+
+    </script>
+
+<main>
+    <div class="container"> 
+        <div id="login-method">
+            <h2>ĐĂNG NHẬP BẰNG</h2>
+            <div id = "login-fbgg">
+                <button><img src="Image/Icon/Facebook Circled.png" alt="">Facebook</button>
+                <button><img src="Image/Icon/Google Plus.png" alt="">Google</button>
+            </div>
+        </div>
+        <div id = "login-signin-region">
+            <section class="login">
+                <h2>ĐĂNG NHẬP</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email của bạn" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                    </div>
+                    <button type="submit">Đăng nhập</button>
+                    <a href="#">Quên mật khẩu?</a>
+                </form>
+            </section>
+    
+            <section class="register">
+                <h2>ĐĂNG KÝ THÀNH VIÊN MỚI</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="text" id="ho" name="ho" placeholder="Họ" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="ten" name="ten" placeholder="Tên" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Nhập lại mật khẩu" required>
+                    </div>
+                    <button type="submit">Đăng ký</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</main>
+
+
+
+
+    <div id="footer"></div>
+    <script>
+        
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('footer').innerHTML = data;
+        });
+    </script>
+</body>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/Index/favicon.png" type="image/png">
+    <title>Thông tin sản phẩm</title>
+    <link rel="stylesheet" href="Thongtinsp.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="show-specs.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <div id="main">
+        <div id="multilevel-link">
+            <p><a href="index.html">Trang chủ</a> / <a href="#">Laptop Gaming</a> / Laptop Gaming Acer Nitro 5 Tiger
+                AN515 58 769J (NH.QFHSV.003)</p>
+        </div>
+        <div id="product-name">
+            <h2 autofocus>Laptop Gaming Acer Nitro 5 Tiger AN515 58 769J (NH.QFHSV.003)</h2>
+            <div id="product-rating">
+                <span>0 đánh giá</span>
+                <button id="like-button">Thích 0</button>
+                <button onclick="fbshareurlPopup()" id="share-button">Chia sẻ</button>
+            </div>
+        </div>
+
+
+        <div id="separator">
+
+        </div>
+        <div id="product-details">
+            <div id="product-details-left">
+                <div id = "image-section">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp/m1.png" alt="Laptop Gaming Acer Nitro 5 Tiger AN515" id="main-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp/m2.png" alt="Image 2" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp/m3.png" alt="Image 3" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp/m4.png" alt="Image 4" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp/m5.png" alt="Image 5" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp/m6.png" alt="Image 6" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp/m7.png" alt="Image 7" style="width:100%">
+                </div>
+            
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                </div>
+            </div>
+                <div id="box-criterion">
+                    <span class="imgthumb">
+                        <img src="Image/Chitietsp/diemnoibat.png" alt="Điểm nổi bật">
+                    </span>
+                    <span  class="imgthumb">
+                        <img src="Image/Chitietsp/thongso.png" alt="Thông số">
+                    </span>
+                    <span class="imgthumb">
+                        <img src="Image/Chitietsp/iconarticle.png" alt="Bài viết đánh giá">
+                    </span>
+                </div>
+                <div id="box-criterion-details">
+                    <a href="#">Điểm nổi bật</a>
+                    <a href="#">Thông số <br>kỹ thuật</a>
+                    <a href="#">Bài viết <br>đánh giá</a>
+                </div>
+
+                <div id = "Chinhsach">
+                    <div id = "Chinhsach-left">
+                        <li><img src="Image/Chitietsp/product_policy_1.png" alt="Policy 1"><span>Chính sách bảo hành <a href="#">Xem chi tiết</a></span></li>
+                        <li><img src="Image/Chitietsp/product_policy_2.png" alt="Policy 2"><span>Cam kết chính hãng 100%</span></li>
+                    </div>
+                    <div id = "Chinhsach-right">
+                        <li><img src="Image/Chitietsp/product_policy_3.png" alt="Policy 3"><span>Bảo hành: 12 tháng</span></li>
+                        <li><img src="Image/Chitietsp/product_policy_4.png" alt="Policy 4"><a href="#">1900 0243</a></li>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <div id="product-details-right">
+                <div id="product-info">
+                    <p class="price">21,800,000₫</p>
+                    <p class="product-code"><b>Mã sản phẩm</b>: LT.AC.NT.AN515-58-769J</p>
+
+                    <div class="promotions">
+                        <h2>KHUYẾN MÃI "BỨT PHÁ MÙA THI" TỪ NGÀY 20.06 ĐẾN 05.07 <a href="#">TẠI ĐÂY</a></h2>
+                        <ul>
+                            <li>Miễn phí nâng cấp thêm Ram R4.LT.8G.3200.GK.KTN</li>
+                            <li>Chương trình KM độc lập, không áp dụng chung với các chương trình khuyến mãi khác</li>
+                            <li>Trả góp 0% lãi suất, Đổi trả trong 7 ngày</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div id="all-specs">
+                        <div class="product-specs">
+                            <div id="thongsokt">
+                                <p>THÔNG SỐ KỸ THUẬT</p>
+                            </div>
+                            <div id="specs-content">
+                                <table>
+                                    <tr>
+                                        <th>CPU:</th>
+                                        <td>Intel Core i7-12700H up to 4.7GHz, 24MB Cache</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ram:</th>
+                                        <td>8GB DDR4 3200MHz (2x SO-DIMM socket, up to 32GB SDRAM)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ổ cứng:</th>
+                                        <td>512GB PCIe NVMe SED SSD (Còn trống 1 khe SSD M.2 PCIE và 1 khe 2.5" SATA)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Card đồ họa:</th>
+                                        <td>NVIDIA® GeForce RTX™ 3050 4GB GDDR6</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Màn hình:</th>
+                                        <td>15.6 inch FHD (1920 x 1080) IPS 144Hz SlimBezel</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Cổng giao tiếp:</th>
+                                        <td>
+                                            <ul>
+                                                <li>1x USB 3.2 Gen 2 Type-C Ports (supporting: USB 3.2 Gen 2 (up to 10
+                                                    Gbps); DisplayPort over USB-C; Thunderbolt 4; USB charging 5 V; 3 A;
+                                                    DC-in port 20 V; 65 W)</li>
+                                                <li>1x USB 3.2 Gen 2 port featuring power-off USB charging</li>
+                                                <li>1x USB 3.2 Ge 1 port</li>
+                                                <li>1x USB 3.2 Gen 1 port</li>
+                                                <li>1x Ethernet (RJ-45) port</li>
+                                                <li>1x HDMI® 2.1 port with HDCP support</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="more-details">
+                                <a id="show-details-button">Xem thêm cấu hình chi tiết</a>
+                            </div>
+
+                            <div id="popup" style="display: none;">
+                                <iframe src="All-specs.html" width="800" height="600"></iframe>
+                                <button id="close-popup">x</button>
+                            </div>
+
+
+                            <div id="message-container"></div>
+
+                            <div class="purchase-options">
+                                <div id="Buy">
+                                    <button id="buy-now">MUA NGAY</button>
+                                </div>
+                                <div id="cart-installment">
+                                    <button id="add-to-cart">THÊM VÀO GIỎ HÀNG</button>
+                                    <button id="installment">TRẢ GÓP 0% QUA THẺ</button>
+                                </div>
+                                <div id = "call">
+                                    <p>Gọi đặt mua <a href="#">1900 0243</a> (8:30 - 21:00)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id = "product-description">
+            <h2>MÔ TẢ SẢN PHẨM</h2>
+            <h2>Đánh giá chi tiết laptop Gaming Acer Nitro 5 Tiger AN515-58-769J </h2>
+            <p>Nổi danh với những chiếc laptop gaming giá rẻ, Acer Nitro 5 vẫn thật sự là một trong những “ông hoàng” ở phân khúc của mình. Và với những thành phần tiên tiến nhất hiện nay, Acer Nitro 5 đã sẵn sàng khi trang bị cho mình một sức mạnh mới, vẻ ngoài mới cùng sản phẩm Acer Nitro 5 Tiger AN515 58 769J. </p>
+            <img src="Image/Chitietsp/img1.png" alt="img1">
+            <h3>Ngoại hình mới lạ, bắt mắt</h3>
+            <p>Có lẽ ngoại hình chính là một trong những điểm mạnh của dòng Acer Nitro 5 nói chung và phiên bản AN515 58 769J nói riêng. Không đề cao sự hầm hố và ngầu lòi như những phiên bản khác, Acer Nitro 5 Tiger AN515 58 769J đem đến những chi tiết có phần dịu dàng và sang trọng hơn, phù hợp với phân khúc người dùng lớn hơn. Tuy nhiên, điều ấy vẫn không làm mất đi vẻ ngoài đặc biệt của Acer Nitro 5 trong dòng laptop gaming, bộ khung được làm từ nhựa Polycarbonate với màu Obsidian Black kết hợp với những đường nét có phần mềm mại nhưng vẫn đem đến sự mạnh mẽ và lịch lãm không chỉ phù hợp cho game thủ mà còn hướng tới người dùng văn phòng. Điều ấy đem đến cho Acer Nitro 5 Tiger AN515 58 769J trọng lượng khá chắc tay với con số 2.5 kg.</p>
+            <p>Phần bàn phím RGB 4 vùng tạo nên vẻ ngoài bắt mắt, giúp cho Nitro 5 Tiger AN515 58 769J có thể tỏa sáng trong không gian thiếu ánh sáng.</p>
+            <img src="Image/Chitietsp/img2.png" alt="img2">
+            <h3>Sức mạnh nội tại mạnh mẽ</h3>
+            <p>Sự ra đời của Intel Gen 12 đang đem lại những nguồn sức mạnh xử lý mới cho mọi sản phẩm laptop hiện nay và Acer Nitro 5 Tiger AN515 58 769J cũng không ngoại lệ. Mang đến sức mạnh xử lý từ i7-12700H trên sản phẩm của mình, Acer có thể yên tâm khi chiếc laptop của mình được sở hữu 14 nhân 20 luồng, một con số vượt trội so với những thế hệ trước đây. Trong đó, 14 nhân ấy bao gồm 6 P-core (Performance core) và 8 E-core (Efficiency core), hướng tới khả năng xử lý mọi tác vụ một cách mượt mà và tốc độ. </p>
+            <p>Và khi nhắc tới Acer Nitro 5, ta không thể không nhắc tới những card màn hình rời đi kèm cùng hiệu năng xử lý mạnh mẽ, vượt trội với mức điểm P/P cực tốt. Phiên bản Acer Nitro 5 Tiger AN515 58 769J được sở hữu cho mình phần GPU đó là RTX 3050. Được hoàn thiện từ kiến trúc Ampere thế hệ 2 cùng các nâng cấp của công nghệ xử lý hình ảnh như NVIDIA DLSS, Max-Q giúp cho chiếc laptop Acer có khả năng xử lý đồ họa mạnh mẽ. Từ đây, bạn có thể yên tâm tận hưởng mọi tựa game AAA yêu thích trên chiếc laptop.</p>
+            <p>Đi kèm trên Acer Nitro 5 Tiger AN515 58 769J là 8GB RAM DDR4 giúp bạn có thể hoạt động với nhiều tác vụ cùng lúc (tối ưu nhất nên nâng cấp lên 16GB với dual-channel) và bộ nhớ 512GB SSD hỗ trợ cho việc lưu trữ dữ liệu.</p>
+            <img src="Image/Chitietsp/img3.png" alt="img3">
+            <h3>Khung hình tối ưu hóa cho gaming</h3>
+            <p>Vẫn là kích thước tiêu chuẩn 15.6 inch, Acer Nitro 5 Tiger AN515 58 769J được tối ưu hóa khả năng xuất hình cùng tấm nền IPS đem lại hình ảnh sắc nét nhất. Thiết kế viền mỏng giúp cho người dùng có thể quan sát những chi tiết một cách thoải mái và rộng hơn. Đây sẽ không phải là Acer Nitro 5 nếu màn hình không hỗ trợ cho khả năng gaming của game thủ, tần số quét 144Hz sẽ đem lại những khung hình mượt mà và đáp ứng mọi tốc độ của hành động trong mọi tựa game. Đây sẽ là trợ thủ đắc lực dành cho chúng ta trong những trận chiến căng thẳng.</p>
+            <img src="Image/Chitietsp/img4.png" alt="img4">
+            <h3>Tối ưu khả năng hoạt động </h3>
+            <p>Nhằm đáp ứng và duy trì cho sức mạnh khổng lồ ấy, Acer tự tin trang bị “đứa con “ của mình hệ thống tản nhiệt tiên tiến. Những phần không khí nóng được tỏa đi xung quanh thân máy. Và ngay trên Acer Nitro 5 Tiger AN515 58 769J, phần mềm Nitro Sense sẽ hỗ trợ cho người dùng khả năng kiểm soát và vận hành hệ thống tản nhiệt nói riêng và laptop nói chung. Hướng tới hiệu năng mạnh mẽ nhất phục vụ cho nhu cầu thích hợp nhất của từng người dùng.</p>
+            <img src="Image/Chitietsp/img5.png" alt="img5">
+            <h3>Tô điểm với bàn phím RGB 4 vùng</h3>
+            <p>Đến với bàn phím, khu vực mà mọi game thủ thường xuyên thao tác trên Acer Nitro 5 Tiger AN515 58 769J. Thiết kế RGB 4 vùng tạo nên điểm nhấn trong quá trình sử dụng, trở thành nguồn cảm hứng mỗi khi sử dụng để làm việc hay giải trí. Và nếu là một game thủ FPS, chắc chắn sự nổi bật của cụm phím WASD sẽ tạo nên sự thu hút với các bạn. Bạn có thể tùy chỉnh phần bàn phím RGB thông qua phần mềm Nitro Sense để phù hợp với phong cách cá nhân của mình.</p>
+            <img src="Image/Chitietsp/img6.png" alt="img6">
+            <h3>Nâng cao trải nghiệm giải trí</h3>
+            <p>Trải nghiệm âm thanh trên Acer Nitro 5 Tiger AN515 58 769J được nâng cao khi được sở hữu công nghệ âm thanh DTS:X Ultra. Âm thanh được phát ra từ loa trên Acer Nitro 5 Tiger AN515 58 769J trở nên chân thực hơn cùng công nghệ 3D, từ đó cho phép bạn hòa mình vào những bản nhạc yêu thích hay khả năng nắm bắt đối trong những tựa game bắn súng.</p>
+            <img src="Image/Chitietsp/img7.png" alt="img7">
+            <h3>Kết nối Internet tốc độ cao</h3>
+            <p>Hỗ trợ tối đa cho khả năng chơi game online của game thủ, Acer Nitro 5 Tiger AN515 58 769J được trang bị những công nghệ kết nối Internet tiên tiến nhất. Intel Killer E2600 trên chiếc Acer Nitro tự tin đem đến tốc độ kết nối Internet mạnh mẽ nhất với khả năng tự động phân loại và ưu tiên băng thông mạng dành cho công việc được chọn. Không chỉ kết nối có dây, kết nối không dây thông qua Intel Killer Wi-Fi 6 sẽ cho bạn thoải mái sử dụng Internet, giảm thiểu tình trạng lag hay rớt mạng khi sử dụng kết nối không dây để chơi game.</p>
+            <img src="Image/Chitietsp/img8.png" alt="img8">
+            <h3>Đảm bảo những cổng kết nối thông dụng</h3>
+            <p>Laptop Acer Nitro 5 Tiger AN515 58 769J mang đến mọi cổng kết nối mà bạn có thể nghĩ tới để phục vụ cho nhu cầu công việc và giải trí, bao gồm USB 3.2 Gen 2 Type-C/Type-A, USB 3.2 Gen 1, RJ45. HDMI 2.1 và jack audio 3.5mm. Đặc biệt, những cổng kết nối được đặt ở ngay dưới mặt giúp cho bạn dễ dàng kết nối và thao tác, tránh gây cản trở trong quá trình sử dụng.</p>
+            <img src="Image/Chitietsp/img9.png" alt="img9">
+        </div>
+
+        </div>
+        <div id="footer"></div>
+        <script>
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+</body>
+
+</html>

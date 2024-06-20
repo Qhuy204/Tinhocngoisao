@@ -1,0 +1,42 @@
+body {
+    background-color: #f4f8fa;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#cart-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    width: 69.6%;
+    background-color: green;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+#cart-list-item a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+#emptyCart img {
+    width: 100px; /* Điều chỉnh kích thước biểu tượng */
+    margin-bottom: 20px;
+}
+
+#emptyCart p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#continueShopping {
+    background-color: #ff4500; /* Màu đỏ của nút */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

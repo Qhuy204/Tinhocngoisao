@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/Index/favicon.png" type="image/png">
+    <title>Thông tin sản phẩm</title>
+    <link rel="stylesheet" href="Thongtinsp.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="show-specs.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <div id="main">
+        <div id="multilevel-link">
+            <p><a href="index.html">Trang chủ</a> / <a href="#">Màn hình máy tính</a> / Màn Hình Samsung LS24C330GAEXXV | 24 inch, FHD, IPS, 100Hz, 4ms, Chân V</p>
+        </div>
+        <div id="product-name">
+            <h2 autofocus>Màn Hình Samsung LS24C330GAEXXV | 24 inch, FHD, IPS, 100Hz, 4ms, Chân V</h2>
+            <div id="product-rating">
+                <span>0 đánh giá</span>
+                <button id="like-button">Thích 0</button>
+                <button onclick="fbshareurlPopup()" id="share-button">Chia sẻ</button>
+            </div>
+        </div>
+
+
+        <div id="separator">
+
+        </div>
+        <div id="product-details">
+            <div id="product-details-left">
+                <div id = "image-section">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-MH/m1.jpg" alt="Image 1" id="main-image">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-MH/m2.jpg" alt="Image 2" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-MH/m3.jpg" alt="Image 3" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-MH/m4.jpg" alt="Image 4" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-MH/m5.jpg" alt="Image 5" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Image/Chitietsp-MH/m6.jpg" alt="Image 6" style="width:100%">
+                </div>
+            
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+                <div id="box-criterion">
+                    <span class="imgthumb">
+                        <img src="Image/Chitietsp/diemnoibat.png" alt="Điểm nổi bật">
+                    </span>
+                    <span  class="imgthumb">
+                        <img src="Image/Chitietsp/thongso.png" alt="Thông số">
+                    </span>
+                    <span class="imgthumb">
+                        <img src="Image/Chitietsp/iconarticle.png" alt="Bài viết đánh giá">
+                    </span>
+                </div>
+                <div id="box-criterion-details">
+                    <a href="#">Điểm nổi bật</a>
+                    <a href="#">Thông số <br>kỹ thuật</a>
+                    <a href="#">Bài viết <br>đánh giá</a>
+                </div>
+
+                <div id = "Chinhsach">
+                    <div id = "Chinhsach-left">
+                        <li><img src="Image/Chitietsp/product_policy_1.png" alt="Policy 1"><span>Chính sách bảo hành <a href="#">Xem chi tiết</a></span></li>
+                        <li><img src="Image/Chitietsp/product_policy_2.png" alt="Policy 2"><span>Cam kết chính hãng 100%</span></li>
+                    </div>
+                    <div id = "Chinhsach-right">
+                        <li><img src="Image/Chitietsp/product_policy_3.png" alt="Policy 3"><span>Bảo hành: 12 tháng</span></li>
+                        <li><img src="Image/Chitietsp/product_policy_4.png" alt="Policy 4"><a href="#">1900 0243</a></li>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <div id="product-details-right">
+                <div id="product-info">
+                    <p class="price">2,350,000₫</p>
+                    <p class="product-code"><b>Mã sản phẩm</b>: L.24.SS.LS24C330GAEXXV</p>
+
+                    <div class="promotions">
+                        <h2>KHUYẾN MÃI "BỨT PHÁ MÙA THI" TỪ NGÀY 20.06 ĐẾN 05.07 <a href="#">TẠI ĐÂY</a></h2>
+                        <ul>
+                            <li>Miễn phí nâng cấp thêm Ram R4.LT.8G.3200.GK.KTN</li>
+                            <li>Chương trình KM độc lập, không áp dụng chung với các chương trình khuyến mãi khác</li>
+                            <li>Trả góp 0% lãi suất, Đổi trả trong 7 ngày</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div id="all-specs">
+                        <div class="product-specs">
+                            <div id="thongsokt">
+                                <p>THÔNG SỐ KỸ THUẬT</p>
+                            </div>
+                            <div id="specs-content">
+                                <table>
+                                    <tr>
+                                        <th>Kiểu dáng:</th>
+                                        <td>Màn phẳng</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tỉ lệ khung hình:</th>
+                                        <td>16:9</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Kích thước:</th>
+                                        <td>23.8 inch
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Công nghệ:</th>
+                                        <td>Tấm nền IPS</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Độ phân giải:</th>
+                                        <td>FHD (1920 x 1080)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Độ sáng:</th>
+                                        <td>250cd/㎡</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tần số quét:</th>
+                                        <td>100Hz</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Thời gian đáp ứng:</th>
+                                        <td>1 (MPRT)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Màu sắc:</th>
+                                        <td>16.7 triệu màu - 72% NTSC</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tiêu chuẩn:</th>
+                                        <td>AMD FreeSync</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Cổng kết nối:</th>
+                                        <td>1xHDMI 1.4, 1xDisplayPort 1.2</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Phụ kiện:</th>
+                                        <td>Dây nguồn, Dây HDMI</td>
+                                    </tr>
+                                    
+
+                                </table>
+                            </div>
+                            <div id="more-details">
+                                <a id="show-details-button">Xem thêm cấu hình chi tiết</a>
+                            </div>
+
+                            <div id="popup" style="display: none;">
+                                <iframe src="All-specs-MH.html" width="800" height="600"></iframe>
+                                <button id="close-popup">x</button>
+                            </div>
+
+
+                            <div id="message-container"></div>
+
+                            <div class="purchase-options">
+                                <div id="Buy">
+                                    <button id="buy-now">MUA NGAY</button>
+                                </div>
+                                <div id="cart-installment">
+                                    <button id="add-to-cart">THÊM VÀO GIỎ HÀNG</button>
+                                    <button id="installment">TRẢ GÓP 0% QUA THẺ</button>
+                                </div>
+                                <div id = "call">
+                                    <p>Gọi đặt mua <a href="#">1900 0243</a> (8:30 - 21:00)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id = "product-description">
+            <h2>MÔ TẢ SẢN PHẨM</h2>
+            <h3>Màn hình Samsung LS24C330GAEXXV (23.8Inch/ Full HD/ 1ms/ 100HZ/ 250cd/m2/ IPS)</h3>
+            <p>Sở hữu các thông số hiển thị ấn tượng và sắc nét, màn hình Samsung LS24C330GAEXXV còn được trang bị các công nghệ thiện đại giúp bảo vệ mắt người dùng, nâng cao trải nghiệm sử dụng. Sản phẩm được trang bị tấm nền IPS nâng cao trải nghiệm hiển thị, tích hợp công nghệ AMD FreeSync chơi game liền mạch hơn cùng tần số quét 100Hz và Chế độ Chơi Game ấn tượng. Cùng Tinhocngoisao tìm hiểu thêm các thông tin chi tiết về chiếc màn hình Samsung này!</p>
+            <img src="Image/Chitietsp-MH/h1.png" alt="img1">
+            <h3>Làm việc hiệu quả</h3>
+            <p>Màn hình Samsung LS24C330GAEXXV sở hữu thiết kế sang trọng và hiện đại, bạn có thể thoải mái đặt màn hình tại nhà riêng hay văn phòng. Màn hình sở hữu tấm nền IPS sống động và chân thực, mang đến cho bạn những trải nghiệm hình ảnh tuyệt vời. Bạn có thể thoải mái thay đổi góc nhìn, quan sát màn hình từ nhiều góc độ khác nhau mà vẫn đảm bảo nhìn rõ ràng các chi tiết, màu sắc tươi sáng và sắc nét giúp bạn làm việc hiệu quả hơn.</p>
+            <img src="Image/Chitietsp-MH/h2.png" alt="img2">
+            <h3>Hiển thị mượt mà</h3>
+            <p>Màn hình Samsung LS24C330GAEXXV có kích thước màn hình 23.8inch, độ phân giải FHD sắc nét cùng thời gian phản hồi chỉ 1ms, tần số quét 100Hz giảm thiểu độ trễ và hiện tượng nhòe hình để bạn không bỏ lỡ bất kỳ điều gì ngay cả khi đang tận hưởng những khoảnh khắc có tốc độ chuyển động cực nhanh. Màn hình có thông số độ sáng 250cd/m2 cung cấp đủ lượng ánh sáng để bạn xử lý các tác vụ một cách dễ dàng và nhanh chóng, đảm bảo chất lượng hiển thị luôn ổn định.</p>
+            <p>RAM Adata XPG Spectrix D50 có tốc độ 3200MHz và độ trễ CL16-20-20, mang lại hiệu năng mạnh mẽ trong cả các bài kiểm tra tổng hợp lẫn ứng dụng thực tế. Đây là một lựa chọn lý tưởng cho các game thủ và người dùng cần đa nhiệm hiệu quả. RAM này cũng hỗ trợ Intel XMP 2.0, giúp dễ dàng ép xung mà không cần phải cấu hình BIOS thủ công.</p>
+            <img src="Image/Chitietsp-MH/h3.png" alt="img3">
+            <h3>Chuyển động ấn tượng</h3>
+            <p>Được tích hợp công nghệ AMD FreeSync đồng bộ tốc độ quét màn hình và VGA, Samsung LS24C330GAEXXV có khả năng giảm hiện tượng xé hình, hạn chế gián đoạn khi bạn đang sử dụng màn hình để xem phim hay chơi game. Tận hưởng những khung hình liền mạch và mượt mà ngay cả khi bạn đang xem những cảnh quay, những tựa game tốc độ cao.</p>
+            <img src="Image/Chitietsp-MH/h4.png" alt="img4">
+            <img src="Image/Chitietsp-MH/h5.png" alt="img5">
+
+            <h3>Chơi game đẳng cấp</h3>
+            <p>Giành lợi thế chiến thắng hơn hẳn so với đối thủ nhờ chế độ Chơi Game trên Samsung LS24C330GAEXXV. Chế độ này có khả năng tinh chỉnh màu sắc và độ tương phản hình ảnh tức thời để khung cảnh trong game trở nên thật sống động, bạn có thể dễ dàng phát hiện ra đối thủ đang ẩn nấp trong bóng tối và những góc nhìn chi tiết hơn.</p>
+            <img src="Image/Chitietsp-MH/h6.png" alt="img6">
+            <h3>Bảo vệ mắt người dùng</h3>
+            <p>Không chỉ sở hữu khả năng hiển thị ấn tượng, màn hình Samsung LS24C330GAEXXV còn giúp bảo vệ cho đôi mắt của bạn khỏi những hiện tương như đau, nhức mỏi do phải dùng máy tính trong thời gian dài nhờ Chế độ Eye Saver và Chống nhấp nháy.</p>
+            <img src="Image/Chitietsp-MH/h7.png" alt="img7">
+            <img src="Image/Chitietsp-MH/h8.png" alt="img8">
+        </div>
+
+        </div>
+        <div id="footer"></div>
+        <script>
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        </script>
+</body>
+
+</html>
