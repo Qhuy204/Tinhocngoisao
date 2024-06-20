@@ -35,17 +35,21 @@
         
             // Function to format price
             function formatPrice(price) {
-                return parseInt(price.replace(/[^0-9]/g, ''), 10);
+                return parseInt(price.replace(/[^\d]/g, ''), 10);
             }
         
             // Function to update total price
             function updateTotalPrice() {
-                const total = Array.from(document.querySelectorAll('.total-column'))
-                    .reduce((sum, totalColumn) => {
-                        return sum + formatPrice(totalColumn.innerText);
-                    }, 0);
+                const totalColumns = document.querySelectorAll('.cart-item .total-column'); // Lấy tất cả các cột tổng tiền trong các mục giỏ hàng
+                let total = 0;
+
+                totalColumns.forEach(totalColumn => {
+                    total += formatPrice(totalColumn.innerText);
+                });
+
                 document.getElementById('totalPrice').innerText = total.toLocaleString() + '₫';
             }
+
         
             // Function to create a cart item element
             function createCartItem(product) {
@@ -115,7 +119,8 @@
             // Save merged orders back to localStorage
             localStorage.setItem('productOrders', JSON.stringify(mergedOrders));
         });
-        </script>
+    </script>
+        
         
     
     <script>
@@ -180,9 +185,10 @@
                         Tổng: <span id="totalPrice">0₫</span>
                     </div>
                     <div class="cart-actions">
-                        <button id="continueShopping">TIẾP TỤC MUA SẮM</button>
+                        <a href="index.html" id="continueShopping">TIẾP TỤC MUA SẮM</a>
                         <button id="checkout">THANH TOÁN</button>
                     </div>
+                    
                 </div>
                 
                 <div id="notes">
